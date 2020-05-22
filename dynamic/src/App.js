@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+
 import {
   Route,
   BrowserRouter,
   Switch
 } from 'react-router-dom';
-import Home from './Home';
+
+import Home     from './Home';
 import Header   from './components/Header';
 import Forms    from './components/Forms';
 import Contact  from './components/Contact';
+import Temp     from './components/Temp';
+
 import './App.css';
 
 class App extends Component {
@@ -22,6 +26,7 @@ class App extends Component {
           <Switch>
             <Route path="/" component={Home} exact />
             <Route path="/Forms" component={Forms} />
+            <Route path="/Temp" component={Temp} />
             <Route path="/Contact" component={Contact} />
             <Route component={Error} />
           </Switch>

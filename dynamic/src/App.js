@@ -6,35 +6,60 @@ import {
   Switch
 } from 'react-router-dom';
 
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+
 import Home     from './Home';
 import Header   from './components/Header';
 import Forms    from './components/Forms';
 import Contact  from './components/Contact';
 import Temp     from './components/Temp';
+import SideBar  from './components/SideBar';
 
 import './App.css';
 
-class App extends Component {
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex"
+  },
+  content: {
+    flexGrow: 1,
+    marginLeft: 200,
+    padding: theme.spacing(3),
+  },
+  toolbar: theme.mixins.toolbar
+}));
 
-  render() {
+export default function App() {
+
+    const classes = useStyles();
+    const theme = useTheme();
 
     return (
 
       <BrowserRouter>
-        <div>
-          <Header />
-          <Switch>
-            <Route path="/" component={Home} exact />
-            <Route path="/Forms" component={Forms} />
-            <Route path="/Temp" component={Temp} />
-            <Route path="/Contact" component={Contact} />
-            <Route component={Error} />
-          </Switch>
+        <div className={classes.root}>
+          <div>
+            {
+              //<Header />
+            }
+            {
+              <SideBar />
+            }
+              <main className={classes.content}>
+                <div className={classes.toolbar} />
+                <Switch>
+                  <Route path="/" component={Home} exact />
+                  <Route path="/Forms" component={Forms} />
+                  <Route path="/Temp" component={Temp} />
+                  <Route path="/Contact" component={Contact} />
+                  <Route component={Error} />
+                </Switch>
+              </main>
+          </div>
         </div>
       </BrowserRouter>
 
     );
   }
-}
 
-export default App;
+//export default App;

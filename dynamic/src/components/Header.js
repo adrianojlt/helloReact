@@ -10,20 +10,21 @@ class Header extends Component {
             <div>
 
                 <div>
-                <AppBar position="static">
+                <AppBar position="fixed">
 
                     <Toolbar>
-                        <Typography variant="title" color="inherit">
+                        <Typography color="inherit">
                             Material UI
                         </Typography>
-                        <Tabs indicatorColor="primary">
+                        <Tabs indicatorColor="primary" value={false}>
                             <Tab 
                                 label="Home" 
                                 component={Link} 
-                                to="/" />
-                            <Tab label="Forms" component={Link} to="/Forms" />
-                            <Tab label="Temp" component={Link} to="/Temp" />
-                            <Tab label="Contact" component={Link} to="/Contact" />
+                                to="/" 
+                                value={false}/>
+                            <Tab label="Forms" component={Link} to="/Forms" value={false} />
+                            <Tab label="Temp" component={Link} to="/Temp" value={false} />
+                            <Tab label="Contact" component={Link} to="/Contact" value={false} />
                         </Tabs> 
                     </Toolbar>
 
@@ -36,6 +37,7 @@ class Header extends Component {
                 <NavLink to="/Temp">Temp</NavLink>
                 <NavLink to="/Contact">Contact</NavLink>
                 */}
+
             </div>
         );
     }

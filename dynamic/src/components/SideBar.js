@@ -63,13 +63,13 @@ function SideBar() {
                         <ListItemIcon> <InboxIcon /> </ListItemIcon>
                         <ListItemText primary="Home" />
                     </ListItem>
+                    <ListItem key="Start" component={Link} to="/Start">
+                        <ListItemIcon><InboxIcon /></ListItemIcon>
+                        <ListItemText primary="Start" />
+                    </ListItem>
                     <ListItem key="Forms" component={Link} to="/Forms">
                         <ListItemIcon><InboxIcon /></ListItemIcon>
                         <ListItemText primary="Forms" />
-                    </ListItem>
-                    <ListItem key="Material" component={Link} to="/Material">
-                        <ListItemIcon><InboxIcon /></ListItemIcon>
-                        <ListItemText primary="Material UI" />
                     </ListItem>
                     {/*['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
                         <ListItem button key={text}>

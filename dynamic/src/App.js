@@ -9,7 +9,7 @@ import {
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 import Home     from './Home';
-import Header   from './components/Header';
+import Start   from './components/Start';
 import Forms    from './components/Forms';
 import Contact  from './components/Contact';
 import Temp     from './components/Temp';
@@ -49,6 +49,7 @@ export default function App() {
                 <div className={classes.toolbar} />
                 <Switch>
                   <Route path="/" component={Home} exact />
+                  <Route path="/Start" component={Start} />
                   <Route path="/Forms" component={Forms} />
                   <Route path="/Temp" component={Temp} />
                   <Route path="/Contact" component={Contact} />

@@ -17,12 +17,6 @@ class Home extends Component {
                 <p>Home</p>
                 <Cenas title={"cenas 01"} />
                 <Cenas title={"cenas 02"} />
-                <p>dsfadsfjdsfjlkdsfjldksjflkdjlkajfkdj</p>
-                <p>dsfadsfjdsfjlkdsfjldksjflkdjlkajfkdj</p>
-                <p>dsfadsfjdsfjlkdsfjldksjflkdjlkajfkdj</p>
-                <p>dsfadsfjdsfjlkdsfjldksjflkdjlkajfkdj</p>
-                <p>dsfadsfjdsfjlkdsfjldksjflkdjlkajfkdj</p>
-                <p>dsfadsfjdsfjlkdsfjldksjflkdjlkajfkdj</p>
                 {jsx}
             </div>
         );
@@ -31,7 +25,7 @@ class Home extends Component {
 
 const jsx = (
     <div>
-        <Cenas />
+        <Cenas title={"cenas jsx"}/>
     </div>
 );
 

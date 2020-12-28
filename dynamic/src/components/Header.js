@@ -1,44 +1,56 @@
 import React, { Component } from "react";
-import { NavLink, Link } from 'react-router-dom';
-import { Toolbar, Typography, AppBar, Tabs, Tab } from "@material-ui/core";
+import {Nav, Navbar, NavDropdown} from 'react-bootstrap'
 
 class Header extends Component {
 
     render () {
+        
+        const { location } = this.props;
 
         return (
-            <div>
 
-                <div>
-                <AppBar position="fixed">
+            <Navbar bg="primary" expand="lg" variant="dark">
+                
+                <Navbar.Brand href="/">Hello React</Navbar.Brand>
 
-                    <Toolbar>
-                        <Typography color="inherit">
-                            Material UI
-                        </Typography>
-                        <Tabs indicatorColor="primary" value={false}>
-                            <Tab 
-                                label="Home" 
-                                component={Link} 
-                                to="/" 
-                                value={false}/>
-                            <Tab label="Forms" component={Link} to="/Forms" value={false} />
-                            <Tab label="Temp" component={Link} to="/Temp" value={false} />
-                            <Tab label="Contact" component={Link} to="/Contact" value={false} />
-                        </Tabs> 
-                    </Toolbar>
+                <Navbar.Toggle aria-controls="main_nav" />
 
-                </AppBar>
-                </div>
+                <Navbar.Collapse id="main_nav">
 
-                {/*
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/Forms">Forms</NavLink>
-                <NavLink to="/Temp">Temp</NavLink>
-                <NavLink to="/Contact">Contact</NavLink>
-                */}
+                    <Nav activeKey={location.pathname}>
 
-            </div>
+                        <Nav.Link href="/Forms">React</Nav.Link>
+                        <Nav.Link href="/Bootstrap">Bootstrap</Nav.Link>
+                        <Nav.Link href="#">Apps</Nav.Link>
+                        <Nav.Link href="#">Services</Nav.Link>
+
+                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                        </NavDropdown>
+
+                    </Nav>
+
+                    <Nav className="ml-auto" activeKey={location.pathname}>
+
+                        <Nav.Link href="/Temp">Temp</Nav.Link>
+                        <Nav.Link href="/Settings">Settings</Nav.Link>
+
+                        <NavDropdown title="About" drop="down" alignRight className="dropdown-menu-right">
+                            <NavDropdown.Item href="">This</NavDropdown.Item>
+                            <NavDropdown.Item href="/Contact">Me</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">Another Action</NavDropdown.Item>
+                        </NavDropdown>
+
+                    </Nav>
+
+                </Navbar.Collapse>
+
+            </Navbar>
         );
     }
 }

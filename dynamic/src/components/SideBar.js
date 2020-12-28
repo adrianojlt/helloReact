@@ -63,6 +63,10 @@ function SideBar() {
                         <ListItemIcon> <InboxIcon /> </ListItemIcon>
                         <ListItemText primary="Home" />
                     </ListItem>
+                    <ListItem key="Start" component={Link} to="/start">
+                        <ListItemIcon> <InboxIcon /> </ListItemIcon>
+                        <ListItemText primary="Start" />
+                    </ListItem>
                     <ListItem key="Forms" component={Link} to="/Forms">
                         <ListItemIcon><InboxIcon /></ListItemIcon>
                         <ListItemText primary="Forms" />

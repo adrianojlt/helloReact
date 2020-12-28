@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
+
+import { withRouter } from 'react-router';
 
 import {
   Route,
@@ -6,60 +8,45 @@ import {
   Switch
 } from 'react-router-dom';
 
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import Container  from 'react-bootstrap';
 
-import Home     from './Home';
-import Header   from './components/Header';
-import Forms    from './components/Forms';
-import Contact  from './components/Contact';
-import Temp     from './components/Temp';
-import SideBar  from './components/SideBar';
+import Home         from './Home';
+import Header       from './components/Header';
+import Bootstrap    from './components/Bootstrap';
+import Forms        from './components/Forms';
+import Contact      from './components/Contact';
+import Temp         from './components/Temp';
 
 import './App.css';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex"
-  },
-  content: {
-    flexGrow: 1,
-    marginLeft: 200,
-    padding: theme.spacing(3),
-  },
-  toolbar: theme.mixins.toolbar
-}));
-
 export default function App() {
 
-    const classes = useStyles();
-    const theme = useTheme();
+    const HeaderWithRoute = withRouter(Header);
 
     return (
 
       <BrowserRouter>
-        <div className={classes.root}>
-          <div>
-            {
-              //<Header />
-            }
-            {
-              <SideBar />
-            }
-              <main className={classes.content}>
-                <div className={classes.toolbar} />
-                <Switch>
-                  <Route path="/" component={Home} exact />
-                  <Route path="/Forms" component={Forms} />
-                  <Route path="/Temp" component={Temp} />
-                  <Route path="/Contact" component={Contact} />
-                  <Route component={Error} />
-                </Switch>
-              </main>
+
+        <div>
+
+          {
+            <HeaderWithRoute />
+          }
+
+          <div className="container-fluid">
+            <Switch>
+              <Route path="/" component={Home} exact />
+              <Route path="/Bootstrap" component={Bootstrap} />
+              <Route path="/Forms" component={Forms} />
+              <Route path="/Temp" component={Temp} />
+              <Route path="/Contact" component={Contact} />
+              <Route component={Error} />
+            </Switch>
           </div>
+
         </div>
+
       </BrowserRouter>
 
     );
   }
-
-//export default App;

@@ -69,11 +69,11 @@ function SideBar() {
                     </ListItem>
                     <ListItem key="Forms" component={Link} to="/Forms">
                         <ListItemIcon><InboxIcon /></ListItemIcon>
-                        <ListItemText primary="Forms" />
+                        <ListItemText primary="Start" />
                     </ListItem>
-                    <ListItem key="Material" component={Link} to="/Material">
+                    <ListItem key="Forms" component={Link} to="/Forms">
                         <ListItemIcon><InboxIcon /></ListItemIcon>
-                        <ListItemText primary="Material UI" />
+                        <ListItemText primary="Forms" />
                     </ListItem>
                     {/*['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
                         <ListItem button key={text}>

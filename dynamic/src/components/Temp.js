@@ -1,9 +1,17 @@
 import React from 'react';
 
+
+
 const Temp = () => {
+
     return (
+
         <div>
-            <p>Temp</p>
+
+            <div className="row">
+                <h2>Temp</h2>
+            </div>
+
         </div>
     );
 };

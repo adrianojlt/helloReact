@@ -4,12 +4,37 @@ class Greetings extends React.Component {
     }
 }
 
+class App extends React.Component {
+
+    render() {
+       return React.createElement('div', null, "App div");
+    }
+}
+
 ReactDOM.render(
     React.createElement(Greetings, { name : 'Chris' }),
     document.getElementById('root')
 );
 
+const hi = React.createElement('h2', null, 'hi!!!');
+const hello = React.createElement('h2', null, 'hello!!!');
+
+const cities = ["Porto", "Lisboa", "Guimaraes", "Felgueiras", "Fafe"];
+
+function ListOfCities({items}) {
+
+    return React.createElement(
+        "ul",
+        { className: "cities" },
+        items.map((city, i) => React.createElement("li", { className: "list", key: i }, city))
+    );
+}
+
+const list = React.createElement(ListOfCities, {items: cities}, null);
+const app = React.createElement(App);
+
 ReactDOM.render(
-    React.createElement('h1', null, 'hello!!!!'),
-    document.getElementById('test')
+    [hi, hello, list, app],
+    document.getElementById('headings')
 );
+

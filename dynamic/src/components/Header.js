@@ -19,18 +19,15 @@ class Header extends Component {
 
                     <Nav activeKey={location.pathname}>
 
-                        <Nav.Link href="/Forms">React</Nav.Link>
-                        <Nav.Link href="/Bootstrap">Bootstrap</Nav.Link>
-                        <Nav.Link href="#">Apps</Nav.Link>
-                        <Nav.Link href="#">Services</Nav.Link>
-
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                        <NavDropdown title="React" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="/jsx">JSX</NavDropdown.Item>
+                            <NavDropdown.Item href="/props">Props</NavDropdown.Item>
+                            <NavDropdown.Item href="/state">State</NavDropdown.Item>
                         </NavDropdown>
+
+                        <Nav.Link href="/Forms">Components</Nav.Link>
+                        <Nav.Link href="/Bootstrap">Bootstrap</Nav.Link>
+                        <Nav.Link href="/Apps">Apps</Nav.Link>
 
                     </Nav>
 
@@ -41,9 +38,8 @@ class Header extends Component {
 
                         <NavDropdown title="About" drop="down" alignRight className="dropdown-menu-right">
                             <NavDropdown.Item href="">This</NavDropdown.Item>
-                            <NavDropdown.Item href="/Contact">Me</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Another Action</NavDropdown.Item>
+                            <NavDropdown.Item href="/Contact">Me</NavDropdown.Item>
                         </NavDropdown>
 
                     </Nav>

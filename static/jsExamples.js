@@ -5,7 +5,6 @@ class Greetings extends React.Component {
 }
 
 class App extends React.Component {
-
     render() {
        return React.createElement('div', null, "App div");
     }
@@ -16,10 +15,7 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-const hi = React.createElement('h2', null, 'hi!!!');
-const hello = React.createElement('h2', null, 'hello!!!');
-
-const cities = ["Porto", "Lisboa", "Guimaraes", "Felgueiras", "Fafe"];
+const cities = ["Porto", "Lisboa", "Guimaraes", "Felgueiras", "Fafe", "Celorico de Basto"];
 
 function ListOfCities({items}) {
 
@@ -30,6 +26,8 @@ function ListOfCities({items}) {
     );
 }
 
+const hi = React.createElement('h2', null, 'hi!!!');
+const hello = React.createElement('h2', null, 'hello!!!');
 const list = React.createElement(ListOfCities, {items: cities}, null);
 const app = React.createElement(App);
 
@@ -37,4 +35,5 @@ ReactDOM.render(
     [hi, hello, list, app],
     document.getElementById('headings')
 );
+
 

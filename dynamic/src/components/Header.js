@@ -25,9 +25,9 @@ class Header extends Component {
                             <NavDropdown.Item href="/state">State</NavDropdown.Item>
                         </NavDropdown>
 
-                        <Nav.Link href="/Forms">Components</Nav.Link>
-                        <Nav.Link href="/Bootstrap">Bootstrap</Nav.Link>
-                        <Nav.Link href="/Apps">Apps</Nav.Link>
+                        <Nav.Link href="/forms">Forms</Nav.Link>
+                        <Nav.Link href="/bootstrap">Bootstrap</Nav.Link>
+                        <Nav.Link href="/apps">Apps</Nav.Link>
 
                     </Nav>
 

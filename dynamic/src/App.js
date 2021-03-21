@@ -15,7 +15,7 @@ import Apps         from './Apps/Apps';
 import Stars        from './Apps/Stars/Stars';
 import Header       from './components/Header';
 import Bootstrap    from './components/Bootstrap';
-import Forms        from './components/Forms';
+import Forms        from './components/Forms/Forms';
 import Contact      from './components/Contact';
 import Temp         from './components/Temp';
 
@@ -43,17 +43,17 @@ export default function App() {
             <Switch>
               <Route path="/" component={Home} exact />
 
-              <Route path="/Jsx" component={Jsx} exact />
-              <Route path="/Props" component={Props} exact />
-              <Route path="/State" component={State} exact />
+              <Route path="/jsx" component={Jsx} exact />
+              <Route path="/props" component={Props} exact />
+              <Route path="/state" component={State} exact />
 
-              <Route path="/Apps" component={Apps} />
-              <Route path="/Stars" component={Stars} />
+              <Route path="/apps" component={Apps} />
+              <Route path="/stars" component={Stars} />
 
-              <Route path="/Bootstrap" component={Bootstrap} />
-              <Route path="/Forms" component={Forms} />
-              <Route path="/Temp" component={Temp} />
-              <Route path="/Contact" component={Contact} />
+              <Route path="/bootstrap" component={Bootstrap} />
+              <Route path="/forms" component={Forms} />
+              <Route path="/temp" component={Temp} />
+              <Route path="/contact" component={Contact} />
               <Route component={Error} />
             </Switch>
           </div>

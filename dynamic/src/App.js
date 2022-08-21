@@ -23,6 +23,8 @@ import Jsx         from './components/React/Jsx';
 import Props       from './components/React/Props';
 import State       from './components/React/State';
 
+import AnimalCard   from './components/React/AnimalCard/AnimalCard';
+
 import './App.css';
 
 export default function App() {
@@ -40,22 +42,28 @@ export default function App() {
           }
 
           <div className="container-fluid">
+
             <Switch>
+
               <Route path="/" component={Home} exact />
 
-              <Route path="/jsx" component={Jsx} exact />
-              <Route path="/props" component={Props} exact />
-              <Route path="/state" component={State} exact />
+              <Route path="/react/jsx" component={Jsx} exact />
+              <Route path="/react/props" component={Props} exact />
+              <Route path="/react/props/animal" component={AnimalCard} exact />
+              <Route path="/react/state" component={State} exact />
 
-              <Route path="/apps" component={Apps} />
-              <Route path="/stars" component={Stars} />
+              <Route path="/apps" exact component={Apps} />
+              <Route path="/apps/stars" component={Stars} />
 
               <Route path="/bootstrap" component={Bootstrap} />
               <Route path="/forms" component={Forms} />
               <Route path="/temp" component={Temp} />
               <Route path="/contact" component={Contact} />
+
               <Route component={Error} />
+
             </Switch>
+            
           </div>
 
         </div>

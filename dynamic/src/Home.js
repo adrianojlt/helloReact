@@ -1,32 +1,28 @@
-import React, {Component} from 'react';
-
-class Cenas extends Component {
-    render() {
-        return (
-            <div>{this.props.title}</div>
-        )
-    }
-}
+import React, { Component } from "react";
 
 class Home extends Component {
+  render() {
+    const title = "Hello React JS - My examples with the Facebook Library React JS";
 
-    render() {
-
-        return (
-            <div>
-                <p>Home</p>
-                <Cenas title={"cenas 01"} />
-                <Cenas title={"cenas 02"} />
-                {jsx}
-            </div>
-        );
-    }
+    return (
+      <>
+        <div className="container">
+          <div className="row">
+            <h2 className="mt-3">{title}</h2>
+            <p className="lead">
+                Here is where i will collect my Facebook Library React JS examples 
+                while training or testing something new.
+            </p>
+          </div>
+          <div class="row">
+            {
+              //<p className="lead">second row</p>
+            }
+          </div>
+        </div>
+      </>
+    );
+  }
 }
-
-const jsx = (
-    <div>
-        <Cenas title={"cenas jsx"}/>
-    </div>
-);
 
 export default Home;

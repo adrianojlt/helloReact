@@ -11,6 +11,7 @@ const Apps = () => {
         <div className="col-sm">
           <ul>
             <li> <Link to="/apps/stars"> Stars </Link> </li>
+            <li> <Link to="/apps/lynx"> Lynx </Link> </li>
             <li> <Link to="/apps/stars"> Gym Form </Link> </li>
           </ul>
         </div>

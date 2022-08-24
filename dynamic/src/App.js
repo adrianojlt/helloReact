@@ -25,6 +25,8 @@ import State       from './components/React/State';
 
 import AnimalCard   from './components/React/AnimalCard/AnimalCard';
 
+import Lynx         from './Apps/Lynx';
+
 import './App.css';
 
 export default function App() {
@@ -54,6 +56,7 @@ export default function App() {
 
               <Route path="/apps" exact component={Apps} />
               <Route path="/apps/stars" component={Stars} />
+              <Route path="/apps/lynx" component={Lynx} />
 
               <Route path="/bootstrap" component={Bootstrap} />
               <Route path="/forms" component={Forms} />

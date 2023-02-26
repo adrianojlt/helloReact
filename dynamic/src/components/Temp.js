@@ -23,6 +23,7 @@ const Temp = () => {
                 <p>Home</p>
                 <Cenas title={"cenas 01"} />
                 <Cenas title={"cenas 02"} />
+                <Cenas title={"cenas 03"} />
                 {jsx}
             </div>
 

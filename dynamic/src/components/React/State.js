@@ -19,6 +19,8 @@ const State = () => {
         <div className="col-sm">{cenas()}</div>
         <div className="col-sm">{cenas()}</div>
       </div>
+      <div className="row">row
+      </div>
     </div>
   );
 };
